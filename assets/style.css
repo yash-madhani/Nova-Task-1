@@ -1,0 +1,221 @@
+html {
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #000000 0%, #090a0f 100%);
+cursor: url('https://freepngimg.com/thumb/categories/1873.png'), url('./images/spaceship.png'),auto;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #000000 0%, #090a0f 100%);
+
+cursor: url('https://freepngimg.com/thumb/categories/1873.png'), url('./images/spaceship.png'),auto;
+}
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #141414; /* Dark background color */
+        padding: 15px 0;
+        text-align: center;
+        z-index: 1000; /* Ensure the navbar is on top of other elements */
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    }
+
+    #navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    }
+
+    #navbar a:hover {
+        color: #ffcc00; /* Yellow on hover */
+        transform: scale(1.2); /* Scale up on hover */
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; /* Add text shadow on hover */
+    }
+    @keyframes animatedBackground {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 100% 100%;
+        }
+    }
+
+    .star {
+        margin-right: 5px;
+        animation: twinkle 2s infinite; /* Apply the star animation */
+    }
+
+   /* Fancy section styles */
+    #title-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+    }
+
+    #title {
+        font-family: 'Pacifico', cursive; /* Fancy font family */
+        font-size: 60px;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+    }
+
+    #tagline {
+        font-family: 'Raleway', sans-serif; /* Alternative font family */
+        font-size: 20px;
+    }
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: #fff;
+    animation: animStar 5s linear infinite;
+}
+#title-container {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+
+#moon-container {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+.hoverable {
+  display: inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  tranform: translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hoverable:before {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus {
+  transform: translateY(-5px);
+}
+
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+/*everything below here is just setting up the page, so dont worry about it */
+@media (min-width: 768px) {
+  .navbar {
+    text-align: center !important;
+    float: none;
+    display: inline-block;
+  }
+}
+body {
+  background-color: black;
+  font-weight: 600;
+  text-align: center !important;
+  color: white;
+}
+
+nav {
+  background: none !important;
+  text-transform: uppercase;
+}
+nav li {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+nav li a {
+  transition: 0.5s color ease-in-out;
+}
+
+.page-title {
+  opacity: 0.75 !important;
+}
+
+#moon {
+    width: 350px; /* Increase the width of the moon */
+    height: 350px; /* Increase the height of the moon */
+background-image: url('https://www.freeiconspng.com/thumbs/moon-png/full-moon-png-6.png');
+background-size: cover;
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    border-radius: 50%;
+    animation: rotateMoon 10s linear infinite;
+
+}
+
+@keyframes rotateMoon {
+     to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@keyframes animStar {
+    to {
+        transform: translateY(100vh);
+    }
+}
